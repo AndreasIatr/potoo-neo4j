@@ -1,0 +1,9 @@
+potoo-neo4j.db/
+bin/
+.idea/
+.gradle/
+.settings/
+.classpath
+build/
+.springBeans
+.project

@@ -13,7 +13,6 @@ public class UserService {
 	UserRepository repo;
 	
 	public User findById(Long id) {
-		User user = repo.findOne(id);
-		return user;
+		return repo.findOne(id);
 	}
 }

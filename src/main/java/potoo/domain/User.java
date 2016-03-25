@@ -8,11 +8,10 @@ import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
 @NodeEntity
 @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
-public class User implements Entity {
+public class User {
 
     @GraphId
     private Long id;
-    @Override
     public Long getId() { return id; }
     public String name;
     public String getName() { return name; }

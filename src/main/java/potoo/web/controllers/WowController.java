@@ -29,11 +29,11 @@ public class WowController {
 		return ResponseEntity.ok(service.findAllWows());
 	}
 	
-	@RequestMapping(value="/wowedBy/{name}", method=RequestMethod.GET)
-	public ResponseEntity<Map<String, Set<Wow>>> getWow(@PathVariable String name) {
-		Map<String, Set<Wow>> set = service.findWowsByWowedName(name);
-		return ResponseEntity.ok(set);
-	}
+//	@RequestMapping(value="/wowedBy/{name}", method=RequestMethod.GET)
+//	public ResponseEntity<Map<String, Set<Wow>>> getWow(@PathVariable String name) {
+//		Map<String, Set<Wow>> set = service.findWowsByWowedName(name);
+//		return ResponseEntity.ok(set);
+//	}
 	
 	@RequestMapping(value="/{id}", method=RequestMethod.GET)
 	@ResponseStatus(HttpStatus.OK)

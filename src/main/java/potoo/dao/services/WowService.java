@@ -27,16 +27,15 @@ public class WowService {
 		return toSet(repo.findAll());
 	}
 	
-	public Map<String, Set<Wow>> findWowsByWowedName(String name) {
-		Set<Wow> wows = repo.findByWowedByName(name);
-		Map<String, Set<Wow>> theMap = new HashMap<>();
-		theMap.put("Wows", wows);
-		return theMap;
-	}
+//	public Map<String, Set<Wow>> findWowsByWowedName(String name) {
+//		Set<Wow> wows = repo.findByWowedByName(name);
+//		Map<String, Set<Wow>> theMap = new HashMap<>();
+//		theMap.put("Wows", wows);
+//		return theMap;
+//	}
 	
 	public Wow findById(Long id) {
 		// depth 2 in order to get wowedBy from the originalWow
-		Wow wow = repo.findOne(id, 2);
-		return wow;
+		return repo.findOne(id, 2);
 	}
 }

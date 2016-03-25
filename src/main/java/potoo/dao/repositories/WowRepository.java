@@ -16,6 +16,6 @@ public interface WowRepository extends GraphRepository<Wow> {
 //			"RETURN w")
 //	Wow findById(@Param("id") Long id);
 	
-	Set<Wow> findByWowedByName(@Param("name") String name);
+//	Set<Wow> findByWowedByName(@Param("name") String name);
 	
 }

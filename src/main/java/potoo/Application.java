@@ -1,6 +1,7 @@
 package potoo;
 
 import java.util.Arrays;
+import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -27,22 +28,22 @@ public class Application implements CommandLineRunner {
 
 	}
 
-	private void prepareDb() {		
+	private void prepareDb() {
 		Wow firstWow = new Wow();
 		firstWow.setWow("This is the first wow.");
 		User andy = new User("Andy");
-		firstWow.setWowedBy(andy);
+		firstWow.wowedBy(andy, new Date());
 		
 		Wow secondWow = new Wow();
 		secondWow.setWow("This is the second wow.");
 		User bob = new User("Bob");
-		secondWow.setWowedBy(bob);
+		secondWow.wowedBy(bob, new Date());
 		secondWow.reWows(firstWow);
 		
 		Wow thirdWow = new Wow();
 		thirdWow.setWow("The third wow");
 		User craig = new User("Craig");
-		thirdWow.setWowedBy(craig);
+		thirdWow.wowedBy(craig, new Date());
 		thirdWow.reWows(secondWow);
 		
 		wowRepository.save(Arrays.asList(firstWow, secondWow, thirdWow));
