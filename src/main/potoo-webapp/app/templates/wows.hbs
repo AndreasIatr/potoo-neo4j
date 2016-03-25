@@ -1,0 +1,14 @@
+The wow follow
+<table>
+  <th>id</th>
+  <th>wow</th>
+  <th>original wow</th>
+{{#each model as |wow|}}
+  <tr>
+    <td> {{#link-to 'wow' wow}}{{wow.id}}{{/link-to}} </td>
+    <td> {{wow.wow}} </td>
+    <td> {{wow.reWows.originalWow.id}} {{wow.reWows.originalWow.wow}} </td>
+  </tr>
+{{/each}}
+</table>
+{{outlet}}

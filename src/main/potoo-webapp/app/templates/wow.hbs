@@ -1,0 +1,10 @@
+on <i>{{model.wowedBy.when}}</i>
+<h1>{{model.wowedBy.user.name}} wowed:</h1>
+<div class='wow'>
+  {{model.wow}}
+</div>
+{{#if model.reWows}}
+  <div class='wow rewow'>
+  Re-wows: {{model.reWows.originalWow.wow}} by {{model.reWows.originalWow.wowedBy.user.name}}
+  </div>
+{{/if}}

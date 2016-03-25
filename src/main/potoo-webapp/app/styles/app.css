@@ -1,0 +1,22 @@
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 15px;
+}
+
+.wow {
+  float: left;
+  border-style: groove;
+  border-radius: 25px;
+  margin: 10px;
+  padding: 10px;
+  box-shadow: 2px 2px;
+}
+
+.rewow {
+  border-color: #8A6343;
+  font-size: smaller;
+  box-shadow: none;
+}
